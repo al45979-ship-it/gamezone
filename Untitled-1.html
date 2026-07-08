@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME ZONE</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#02142b,#063b73,#02142b);
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    display:block;
+    text-align:center;
+    padding:40px;
+    background:#0077ff;
+    box-shadow:0 5px 15px black;
+}
+
+header h1{
+    font-size:50px;
+    letter-spacing:3px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+/* MENU */
+
+nav{
+    background:#001d3d;
+    text-align:center;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:25px;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00c3ff;
+}
+
+/* BANNER */
+
+.banner img{
+    display:block;
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+/* SECCIONES */
+
+section{
+    display:block;
+    padding:50px;
+    text-align:center;
+}
+
+section h2{
+    margin-bottom:40px;
+    font-size:35px;
+    color:#00c3ff;
+}
+
+/* TARJETAS */
+
+.tarjeta{
+    display:inline-block;
+    width:300px;
+    background:#0a2444;
+    margin:20px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,195,255,.5);
+    transition:.4s;
+    vertical-align:top;
+}
+
+.tarjeta:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 25px #00c3ff;
+}
+
+.tarjeta img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.tarjeta h3{
+    margin:15px;
+}
+
+.tarjeta p{
+    margin:15px;
+    line-height:25px;
+}
+
+button{
+    margin-bottom:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:#008cff;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#00c3ff;
+    color:black;
+}
+
+/* TABLA */
+
+.tabla{
+    display:table;
+    width:100%;
+}
+
+.celda{
+    display:table-cell;
+    background:#0a2444;
+    border:3px solid #00c3ff;
+    padding:30px;
+}
+
+.celda h3{
+    margin-bottom:15px;
+    color:#00c3ff;
+}
+
+/* GALERIA FLEXBOX */
+
+.galeria{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.galeria img{
+    width:320px;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,195,255,.5);
+    transition:.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.08) rotate(2deg);
+    box-shadow:0 0 25px #00c3ff;
+}
+
+/* FOOTER */
+
+footer{
+    display:block;
+    background:#001d3d;
+    text-align:center;
+    padding:35px;
+    margin-top:40px;
+    box-shadow:0 -5px 15px black;
+}
+
+footer h3{
+    color:#00c3ff;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .tarjeta{
+        width:90%;
+    }
+
+    .celda{
+        display:block;
+        margin-bottom:10px;
+    }
+
+    .galeria{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .galeria img{
+        width:90%;
+    }
+
+    nav a{
+        display:block;
+        margin:10px;
+    }
+
+}
+</style>
+<header>
+    <h1>🎮 GAME ZONE</h1>
+    <p>Warzone • Fortnite • Valorant</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#comparativa">Comparativa</a>
+    <a href="#galeria">Galería</a>
+</nav>
+
+<section class="banner" id="inicio">
+    <img src="banner.jpg" alt="Banner Gamer">
+</section>
+
+<section id="juegos">
+    <h2>Juegos Más Populares</h2>
+
+    <div class="tarjeta">
+        <img src="warzone.jpg" alt="Warzone">
+        <h3>Call of Duty: Warzone</h3>
+        <p>Un Battle Royale con mapas enormes, armas modernas y acción intensa.</p>
+        <button>Ver más</button>
+    </div>
+
+    <div class="tarjeta">
+        <img src="fortnite.jpg" alt="Fortnite">
+        <h3>Fortnite</h3>
+        <p>Construye, sobrevive y disfruta de eventos únicos con tus amigos.</p>
+        <button>Ver más</button>
+    </div>
+
+    <div class="tarjeta">
+        <img src="valorant.jpg" alt="Valorant">
+        <h3>Valorant</h3>
+        <p>Shooter táctico 5 vs 5 donde cada agente tiene habilidades especiales.</p>
+        <button>Ver más</button>
+    </div>
+
+</section>
+
+<section id="comparativa">
+
+    <h2>Comparativa</h2>
+
+    <div class="tabla">
+
+        <div class="celda">
+            <h3>Warzone</h3>
+            <p>Género</p>
+            <p>Battle Royale</p>
+        </div>
+
+        <div class="celda">
+            <h3>Fortnite</h3>
+            <p>Género</p>
+            <p>Battle Royale / Construcción</p>
+        </div>
+
+        <div class="celda">
+            <h3>Valorant</h3>
+            <p>Género</p>
+            <p>Shooter Táctico</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="galeria">
+
+    <h2>Galería Gamer</h2>
+
+    <div class="galeria">
+
+        <img src="warzone1.jpg" alt="">
+        <img src="warzone2.jpg" alt="">
+        <img src="fortnite1.jpg" alt="">
+        <img src="fortnite2.jpg" alt="">
+        <img src="valorant1.jpg" alt="">
+        <img src="valorant2.jpg" alt="">
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>GAME ZONE</h3>
+
+    <p>Explora los mejores videojuegos del momento.</p>
+
+    <p>Warzone | Fortnite | Valorant</p>
+
+    <p>© 2026 Todos los derechos reservados.</p>
+
+</footer>
+
+</body>
+</html>
+```
